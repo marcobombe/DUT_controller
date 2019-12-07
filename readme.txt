@@ -23,7 +23,7 @@ GND = PIN 14
 VCC = PIN 1
 DO (SCL) = PIN 5 
 D1 (SDA) = PIN 3
-RES (GND) = 100nF to GND and 10kOhm to VCC 
+RES (GND) = 100nF to GND and 10kOhm to VCC, and to PIN 38 for clear power on reset
 DC (GND) = PIN 9
 CS (GND) = PIN 39
 
