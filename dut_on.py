@@ -21,8 +21,8 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.OUT)
+GPIO.setup(20, GPIO.OUT)
 GPIO.setwarnings(False)
-
 done = False
 import time
 
@@ -72,6 +72,13 @@ disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
 # digital GPIO pin numbers for all the required display pins.  For example
 # on a Raspberry Pi with the 128x32 display you might use:
 # disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST, dc=DC, sclk=18, din=25, cs=22)
+
+GPIO.output(20, 1)
+time.sleep(.1)
+GPIO.output(20, 0)
+time.sleep(.1)
+GPIO.output(20, 1)
+time.sleep(.1)
 
 # Initialize library.
 disp.begin()
