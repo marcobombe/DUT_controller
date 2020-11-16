@@ -78,6 +78,7 @@ time.sleep(.1)
 GPIO.output(20, 0)
 time.sleep(.1)
 GPIO.output(20, 1)
+time.sleep(.1)
 
 # Initialize library.
 disp.begin()
@@ -144,4 +145,4 @@ while not done:
     disp.display()
     time.sleep(.1)
     done = True
-    GPIO.cleanup()
+    #GPIO.cleanup()
